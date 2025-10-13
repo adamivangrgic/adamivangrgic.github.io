@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Portfolio</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* black background */
+            color: #fff; /* white text */
+            padding: 2rem;
+        }
+
+        /* Intro */
+        .intro {
+            text-align: center;
+            margin-top: 7rem; /* headroom */
+            margin-bottom: 7rem; /* spacing below intro */
+        }
+
+        .intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* Projects grid */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            justify-content: center; /* center the grid */
+            max-width: 1000px; /* overall grid width */
+            margin: 0 auto;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            background-color: #111; /* dark grey box */
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 400px; /* individual box max width */
+            margin: 0 auto; /* center box if fewer than grid columns */
+        }
+
+        .project-image {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* crop to square/fit nicely */
+        }
+
+        .project-info {
+            padding: 1rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .project-info p {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        .project-info a {
+            color: #000;
+            background-color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .project-info a:hover {
+            background-color: #ccc;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Intro -->
+    <div class="intro">
+        <h1>Hi, I'm Adam</h1>
+        <p>I'm a student, software developer and a homelab enthusiast</p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects">
+        <div class="project">
+            <div class="project-image">
+                <img src="https://private-user-images.githubusercontent.com/126574324/500497005-1abed476-12bf-436e-8da2-5a3e5afb4ff4.PNG?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjAzNjEyNTcsIm5iZiI6MTc2MDM2MDk1NywicGF0aCI6Ii8xMjY1NzQzMjQvNTAwNDk3MDA1LTFhYmVkNDc2LTEyYmYtNDM2ZS04ZGEyLTVhM2U1YWZiNGZmNC5QTkc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDEzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAxM1QxMzA5MTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03OWIxYjdmNDdlZmI2MmJiMWJmYTE4OTk5ZWE2ZTRhNjhiYTk0Yzc2NmNmNTlkMDU1NzNmNjgxNjFmOWI4NTNmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fmg6fQ4h3a9hMiFIkNkhjhmxA9YPnFAYUqjY02nEPS0" alt="Project 1 Screenshot">
+            </div>
+            <div class="project-info">
+                <h3>ZET transit tracker</h3>
+                <p>Local transit tracker for Zagreb using GTFS realtime data</p>
+                <a href="https://github.com/adamivangrgic/zagreb-transport" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Add more projects as needed -->
+    </div>
+
+</body>
+</html>
